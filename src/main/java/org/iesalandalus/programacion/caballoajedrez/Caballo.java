@@ -37,4 +37,18 @@ public class Caballo
     posicion.columna='b';
     
     }
+    public Caballo(Color color)
+    {
+        if(color==Color.BLANCO)
+        {
+        color=Color.BLANCO;
+        posicion.fila=1;
+        posicion.columna='b';
+        }else
+        {
+            color=Color.NEGRO;
+            posicion.fila=8;
+            posicion.columna='b';
+        }
+        }
 }
