@@ -13,5 +13,21 @@ public class Caballo
 {
     private Color color;
     private Posicion posicion;
+
+    private Color getColor() {
+        return color;
+    }
+
+    private Posicion getPosicion() {
+        return posicion;
+    }
+
+    private void setColor(Color color) {
+        this.color = color;
+    }
+
+    private void setPosicion(Posicion posicion) {
+        this.posicion = posicion;
+    }
     
 }
