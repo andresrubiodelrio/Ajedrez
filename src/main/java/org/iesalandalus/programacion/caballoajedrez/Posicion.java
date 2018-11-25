@@ -5,6 +5,8 @@
  */
 package org.iesalandalus.programacion.caballoajedrez;
 
+import java.util.Objects;
+
 /**
  *
  * @author Youness
@@ -37,6 +39,27 @@ public Posicion (final Posicion posicion1)
 {
    return "La fila es: "+fila+" y la columna es: "+columna;
 }
+
+ public boolean equals(Object obj){
+     if(this==obj){
+         return true;
+     }
+     if(obj==null){
+         return false;
+     }
+     if(getClass() != obj.getClass()){
+         return false;
+     }
+     final Posicion other = (Posicion) obj;
+     if(!Objects.equals(this.columna, other.columna)){
+         return false;
+     }
+     if(!Objects.equals(this.fila, other.fila)){
+         return false;
+     }
+         
+     return true;
+ }
     
     public int getFila() {
         return fila;
