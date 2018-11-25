@@ -32,6 +32,11 @@ public Posicion (final Posicion posicion1)
     this.columna=posicion1.columna;
     this.fila=posicion1.fila;
 }
+
+ public String toString()
+{
+   return "La fila es: "+fila+" y la columna es: "+columna;
+}
     
     public int getFila() {
         return fila;
@@ -53,6 +58,5 @@ public Posicion (final Posicion posicion1)
             throw new IllegalArgumentException("La columna pasada como parametro no es valida, prueba con este intervalo [a,h]");
         else
         this.columna = columna;
-    }
-    
+    }   
 }
