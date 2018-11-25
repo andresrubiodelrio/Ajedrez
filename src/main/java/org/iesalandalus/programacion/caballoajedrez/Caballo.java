@@ -30,4 +30,11 @@ public class Caballo
         this.posicion = posicion;
     }
     
+    public Caballo()
+    {
+    color=Color.NEGRO;
+    posicion.fila=8;
+    posicion.columna='b';
+    
+    }
 }
