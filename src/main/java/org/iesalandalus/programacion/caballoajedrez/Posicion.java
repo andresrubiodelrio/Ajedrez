@@ -13,7 +13,18 @@ public class Posicion
 {
     int fila;
     char columna;
-
+Posicion(int fila, char columna)
+{
+   if(fila<1 || fila>8)
+            throw new IllegalArgumentException("La fila pasada como parametro no es valida, prueba con este intervalo [1,8]");
+        else
+        this.fila = fila;
+   if(columna<'a' || columna>'h')
+            throw new IllegalArgumentException("La columna pasada como parametro no es valida, prueba con este intervalo [a,h]");
+        else
+        this.columna=columna;
+}
+    
     public int getFila() {
         return fila;
     }
@@ -31,7 +42,7 @@ public class Posicion
 
     public void setColumna(char columna) {
         if(columna<'a' || columna>'h')
-            throw new IllegalArgumentException("La fila pasada como parametro no es valida, prueba con este intervalo [a,h]");
+            throw new IllegalArgumentException("La columna pasada como parametro no es valida, prueba con este intervalo [a,h]");
         else
         this.columna = columna;
     }
