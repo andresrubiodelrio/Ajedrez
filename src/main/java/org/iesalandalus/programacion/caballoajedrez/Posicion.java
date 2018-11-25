@@ -13,7 +13,7 @@ public class Posicion
 {
     int fila;
     char columna;
-Posicion(int fila, char columna)
+public Posicion(int fila, char columna)
 {
    if(fila<1 || fila>8)
             throw new IllegalArgumentException("La fila pasada como parametro no es valida, prueba con este intervalo [1,8]");
@@ -23,6 +23,14 @@ Posicion(int fila, char columna)
             throw new IllegalArgumentException("La columna pasada como parametro no es valida, prueba con este intervalo [a,h]");
         else
         this.columna=columna;
+}
+public Posicion (final Posicion posicion1)
+{
+    if(posicion1==null)
+    throw new IllegalArgumentException("Error: has pasado un parámetro nulo");
+    
+    this.columna=posicion1.columna;
+    this.fila=posicion1.fila;
 }
     
     public int getFila() {
